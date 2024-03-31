@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  background: rgb(233, 238, 246);
+}
+
+.card {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  height: 600px;
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+  align-content: center;
+  border-radius: 20px;
+  background: white;
+}
+.card__tag {
+  display: block;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 15px 50px;
+}
+.card__tag-text {
+  display: inline-flex;
+  background: rgb(240, 238, 255);
+  color: rgb(101, 88, 211);
+  border-radius: 15px;
+  margin: auto;
+  padding: 15px;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: bolder;
+  width: 150px;
+  height: 25px;
+}
+.card__title {
+  display: block;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 15px 50px;
+}
+.card__title-text {
+  margin: auto;
+  font-size: 60px;
+}
+.card__description {
+  display: block;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 15px 50px;
+}
+.card__description-text {
+  margin: auto;
+  font-size: 45px;
+  color: rgb(159, 159, 159);
+}
+.card__button {
+  display: block;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 25px 50px;
+}
+.card__button button {
+  background: white;
+  border: 3px rgb(101, 88, 211) solid;
+  border-radius: 15px;
+  color: rgb(101, 88, 211);
+  font-size: 30px;
+  font-weight: bolder;
+  padding: 15px;
+  width: 350px;
+  height: 80px;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  -moz-column-gap: 25px;
+       column-gap: 25px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.card__button button:hover {
+  color: white;
+}
+.card__button button:hover i {
+  color: white;
+  right: 12%;
+}
+.card__button button:hover::before {
+  background: rgb(101, 88, 211);
+  height: 100%;
+  top: 0;
+}
+.card__button button::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 0;
+  background: white;
+  top: 50%;
+  left: 0;
+  transition: all 0.3s ease;
+}
+.card__button button i {
+  color: rgb(101, 88, 211);
+  transition: all 0.3s ease;
+  position: absolute;
+  right: -20%;
+}/*# sourceMappingURL=index.css.map */
