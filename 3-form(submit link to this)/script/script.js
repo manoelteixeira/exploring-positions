@@ -7,17 +7,17 @@ form.addEventListener("submit", (event) => {
   firstName = firstName.value;
   email = email.value;
   confirm = confirm.value;
-  if (firstName == "") {
-    message("First Name missing");
-  }
-  if (email != confirm) {
+  if (firstName == "" || email == "" || confirm == "") {
+    message("Please fill all the fields");
+  } else if (email != confirm) {
     message("E-mail address is diffenent");
     form.confirm.value = "";
+  } else {
+    message("Success", "green");
+    form.firstName.value = "";
+    form.email.value = "";
+    form.confirm.value = "";
   }
-  message("Success", "green");
-  form.firstName.value = "";
-  form.email.value = "";
-  form.confirm.value = "";
 });
 
 function message(str, color) {
